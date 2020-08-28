@@ -203,7 +203,7 @@ router.get('/', (req, res) => {
                     })
                 }
  //---------------------------------------------------Both Hobbies----------------------------------------               
-                else if (rows1[0].Hobby1 != "None" && rows1[0].Hobby2 != "None" && rows1[0].Fame_rating == "None"  && rows1[0].Age == "None"){
+                else if (rows1[0].Hobby1 != "None" && rows1[0].Hobby2 != "None"){
                     connection.query("SELECT `users`.`id`, `users`.`username`,`users`.`last_seen`,`users`.`Firstname`, `users`.`fame_rating`, `users`.`Lastname`, "+
                                     "`users`.`block_status`,`users`.`Age`, `users`.`Gender`,`users`.`Orientation`, `users`.`Bio`, `users`.`profile_pic`, "+
                                     "`user_hobbies`.`Hobby1`, `user_hobbies`.`Hobby2`, `user_hobbies`.`Hobby3`, "+
